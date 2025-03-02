@@ -5,6 +5,7 @@ import concatClass from "discourse/helpers/concat-class";
 import icon from "discourse/helpers/d-icon";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { escapeExpression } from "discourse/lib/utilities";
+import not from "truth-helpers/helpers/not";
 
 export default {
     name: "header-icon-links",
@@ -23,12 +24,14 @@ export default {
             // svg icon from, size 32
             // https://www.svgrepo.com/svg/306824/svelte?edit=true
             api.headerIcons.add("svelte-button", <template>
-                <li>
-                    <a id="svelte-button" class="icon btn-flat" href="https://east.xjtu.app" title="EastXJ">
-                    <img src="https://assets.xjtu.app/pool/svelte.bw.svg" aria-hidden="true" />
-                    <span class="sr-only">EastXJ</span>
-                    </a>
-                </li>
+                {{#if (not this.site.mobileView)}}
+                    <li>
+                        <a id="svelte-button" class="icon btn-flat" href="https://east.xjtu.app" title="EastXJ">
+                        <img src="https://assets.xjtu.app/pool/svelte.bw.svg" aria-hidden="true" />
+                        <span class="sr-only">EastXJ</span>
+                        </a>
+                    </li>
+                {{/if}}
             </template>, {
                 before: beforeIcon,
             });
