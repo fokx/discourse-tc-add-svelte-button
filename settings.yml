@@ -1,2 +1,4 @@
-example_setting:
-  default: true
+svg_icons:
+  type: "list"
+  list_type: "compact"
+  default: "address-book"
