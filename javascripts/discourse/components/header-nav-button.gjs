@@ -11,10 +11,8 @@ export default class HeaderNavButton extends Component {
     <template>
     {{#if (not this.site.mobileView)}}
         <li>
-            <a class="icon btn-flat" href="https://east.xjtu.app" title="EastXJ">
-                <img src="https://assets.xjtu.app/pool/svelte.bw.svg" aria-hidden="true" />
-                <span class="sr-only">EastXJ</span>
-            </a>
+            <DButton class="icon btn-flat" href="https://east.xjtu.app" @icon="s"  >
+            </DButton>
         </li>
     {{/if}}
     </template>
