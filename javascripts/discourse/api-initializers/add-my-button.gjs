@@ -20,7 +20,8 @@ export default {
                 }
             });
             const beforeIcon = ["chat", "search", "hamburger", "user-menu"];
-
+            // svg icon from, size 32
+            // https://www.svgrepo.com/svg/306824/svelte?edit=true
             api.headerIcons.add("svelte-button", <template>
                 <li>
                     <a id="svelte-button" class="icon btn-flat" href="https://east.xjtu.app" title="EastXJ">
