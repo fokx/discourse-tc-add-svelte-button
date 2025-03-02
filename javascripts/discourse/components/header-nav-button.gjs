@@ -11,7 +11,7 @@ export default class HeaderNavButton extends Component {
     <template>
     {{#if (not this.site.mobileView)}}
         <li>
-            <a id="svelte-button" class="icon btn-flat" href="https://east.xjtu.app" title="EastXJ">
+            <a class="icon btn-flat" href="https://east.xjtu.app" title="EastXJ">
                 <img src="https://assets.xjtu.app/pool/svelte.bw.svg" aria-hidden="true" />
                 <span class="sr-only">EastXJ</span>
             </a>
