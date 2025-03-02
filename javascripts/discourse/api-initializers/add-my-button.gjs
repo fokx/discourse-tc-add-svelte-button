@@ -24,12 +24,9 @@ export default {
                     svelte_button.href = url;
                 }
             });
-            const beforeIcon = ["chat", "search", "hamburger", "user-menu"];
             // svg icon from, size 32
             // https://www.svgrepo.com/svg/306824/svelte?edit=true
-            api.headerIcons.add("svelte-button", HeaderNavButton, {
-                before: beforeIcon,
-            });
+            api.headerIcons.add("svelte-button", HeaderNavButton);
         });
     },
 };
