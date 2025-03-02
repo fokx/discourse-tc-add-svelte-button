@@ -14,11 +14,14 @@ export default {
         withPluginApi("1.0", (api) => {
             api.onPageChange(() => {
                 let pathname = window.location.pathname;
+                let url = `https://east.xjtu.app`;
                 if (pathname.startsWith("/t/")){
                     let topic_id = pathname.split("/")[3];
-                    document.getElementById('svelte-button').href = `https://east.xjtu.app/tn/${topic_id}`;
-                } else{
-                    document.getElementById('svelte-button').href = `https://east.xjtu.app`;
+                    url = `https://east.xjtu.app/tn/${topic_id}`;
+                }
+                const svelte_button = document.getElementById('svelte-button');
+                if (svelte_button) {
+                    svelte_button.href = url;
                 }
             });
             const beforeIcon = ["chat", "search", "hamburger", "user-menu"];
